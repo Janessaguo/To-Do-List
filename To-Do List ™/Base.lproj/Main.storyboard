@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -47,6 +48,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="39Q-pz-ii6" kind="show" id="yqb-dj-gkp"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -59,6 +63,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="96g-ZI-3Uk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-327" y="-367"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="VEh-Kv-bK2">
+            <objects>
+                <viewController id="39Q-pz-ii6" customClass="DetailsViewController" customModule="To_Do_List__" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KbX-0R-3P3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="8S2-Z5-7ZD"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="2LS-gF-ttB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FRq-17-eO1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="344" y="-494"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="66A-2C-dk6">
