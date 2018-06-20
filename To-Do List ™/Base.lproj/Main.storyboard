@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -161,40 +162,48 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="119.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DJ6-2a-8d5">
-                                            <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DJ6-2a-8d5">
+                                            <rect key="frame" x="5" y="0.0" width="75" height="120"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                             <state key="normal" title="⃞"/>
                                         </button>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="HKV-00-qR3">
-                                            <rect key="frame" x="45" y="10" width="285" height="100"/>
+                                            <rect key="frame" x="80" y="0.0" width="295" height="119.5"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CsC-o6-DTC">
-                                                    <rect key="frame" x="0.0" y="0.0" width="285" height="76"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CsC-o6-DTC">
+                                                    <rect key="frame" x="0.0" y="0.0" width="295" height="83.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Duedate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbq-wf-O46">
-                                                    <rect key="frame" x="0.0" y="76" width="285" height="24"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duedate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbq-wf-O46">
+                                                    <rect key="frame" x="0.0" y="83.5" width="295" height="36"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="100" id="cQw-CL-0Ha"/>
+                                                <constraint firstItem="dbq-wf-O46" firstAttribute="leading" secondItem="CsC-o6-DTC" secondAttribute="leading" id="AdZ-Kt-ecW"/>
+                                                <constraint firstItem="CsC-o6-DTC" firstAttribute="height" secondItem="HKV-00-qR3" secondAttribute="height" multiplier="0.7" id="C6l-Dz-0iL"/>
+                                                <constraint firstItem="dbq-wf-O46" firstAttribute="trailing" secondItem="CsC-o6-DTC" secondAttribute="trailing" id="MgX-g3-RYr"/>
+                                                <constraint firstItem="dbq-wf-O46" firstAttribute="height" secondItem="HKV-00-qR3" secondAttribute="height" multiplier="0.3" id="UpA-xT-U6f"/>
                                             </constraints>
                                         </stackView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="HKV-00-qR3" firstAttribute="top" secondItem="mpR-Cw-PJw" secondAttribute="top" constant="10" id="1kK-km-y5T"/>
-                                        <constraint firstAttribute="bottom" secondItem="HKV-00-qR3" secondAttribute="bottom" constant="10" id="FmD-jS-7T2"/>
-                                        <constraint firstItem="HKV-00-qR3" firstAttribute="leading" secondItem="mpR-Cw-PJw" secondAttribute="leading" constant="45" id="QPb-r2-SOb"/>
-                                        <constraint firstAttribute="trailing" secondItem="HKV-00-qR3" secondAttribute="trailing" constant="45" id="TID-Xu-tS1"/>
+                                        <constraint firstItem="HKV-00-qR3" firstAttribute="top" secondItem="mpR-Cw-PJw" secondAttribute="top" id="1gu-Zz-GhL"/>
+                                        <constraint firstItem="DJ6-2a-8d5" firstAttribute="leading" secondItem="mpR-Cw-PJw" secondAttribute="leading" constant="5" id="3xd-Fe-QXJ"/>
+                                        <constraint firstAttribute="trailing" secondItem="HKV-00-qR3" secondAttribute="trailing" id="8wZ-Pt-QjV"/>
+                                        <constraint firstAttribute="bottom" secondItem="DJ6-2a-8d5" secondAttribute="bottom" id="KBl-hV-19h"/>
+                                        <constraint firstItem="HKV-00-qR3" firstAttribute="leading" secondItem="DJ6-2a-8d5" secondAttribute="trailing" id="KjD-xb-C8m"/>
+                                        <constraint firstItem="DJ6-2a-8d5" firstAttribute="top" secondItem="mpR-Cw-PJw" secondAttribute="top" id="as9-68-Q5e"/>
+                                        <constraint firstAttribute="bottom" secondItem="HKV-00-qR3" secondAttribute="bottom" id="xN5-wO-f0r"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <constraints>
+                                    <constraint firstItem="DJ6-2a-8d5" firstAttribute="width" secondItem="Dim-5C-j5F" secondAttribute="width" multiplier="0.2" id="TKN-v2-mQg"/>
+                                </constraints>
                             </tableViewCell>
                         </prototypes>
                         <connections>
