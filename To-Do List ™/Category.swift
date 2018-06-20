@@ -14,6 +14,7 @@ class TaskCategory: Codable {
     var colorGreen: Int
     var colorBlue: Int
     
+    
     init(name: String, colorRed: Int, colorGreen: Int, colorBlue: Int) {
         self.name = name
         self.colorRed = colorRed

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Task {
+class Task: Codable {
     var title: String
     var description: String
     var dueDate: String
