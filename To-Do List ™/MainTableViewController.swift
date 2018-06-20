@@ -55,8 +55,10 @@ class MainTableViewController: UITableViewController {
 
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as! TaskTableViewCell
+        let row = indexPath.row
+        cell.titleLabel.text = incompleteTasks[row].title
+        cell.dueDateLabel.text = incompleteTasks[row].dueDate
         // Configure the cell...
 
         return cell

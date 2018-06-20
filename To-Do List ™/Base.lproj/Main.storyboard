@@ -155,7 +155,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="120" id="Dim-5C-j5F">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="120" id="Dim-5C-j5F" customClass="TaskTableViewCell" customModule="To_Do_List__" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Dim-5C-j5F" id="mpR-Cw-PJw">
@@ -204,6 +204,11 @@
                                 <constraints>
                                     <constraint firstItem="DJ6-2a-8d5" firstAttribute="width" secondItem="Dim-5C-j5F" secondAttribute="width" multiplier="0.2" id="TKN-v2-mQg"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="checkMarkButton" destination="DJ6-2a-8d5" id="XA2-p6-WRx"/>
+                                    <outlet property="dueDateLabel" destination="dbq-wf-O46" id="yRw-h9-Jjd"/>
+                                    <outlet property="titleLabel" destination="CsC-o6-DTC" id="Bhg-IA-224"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
