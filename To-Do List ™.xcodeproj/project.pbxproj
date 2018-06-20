@@ -15,6 +15,7 @@
 		F6CCBAD720D9EDE600C66208 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CCBAD620D9EDE600C66208 /* Category.swift */; };
 		F6CCBADB20D9F0E800C66208 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CCBADA20D9F0E800C66208 /* Task.swift */; };
 		F6CCBADD20D9F0F000C66208 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CCBADC20D9F0EF00C66208 /* DetailsViewController.swift */; };
+		F6CCBADF20D9F43900C66208 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CCBADE20D9F43900C66208 /* TaskTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		F6CCBAD620D9EDE600C66208 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		F6CCBADA20D9F0E800C66208 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		F6CCBADC20D9F0EF00C66208 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		F6CCBADE20D9F43900C66208 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				F6CCBABE20D8EC7200C66208 /* AppDelegate.swift */,
 				F6CCBAD020D8F23E00C66208 /* MainTableViewController.swift */,
 				F6CCBAC220D8EC7200C66208 /* Main.storyboard */,
+				F6CCBADE20D9F43900C66208 /* TaskTableViewCell.swift */,
 				F6CCBAC520D8EC7200C66208 /* Assets.xcassets */,
 				F6CCBAC720D8EC7200C66208 /* LaunchScreen.storyboard */,
 				F6CCBACA20D8EC7200C66208 /* Info.plist */,
@@ -147,6 +150,7 @@
 			files = (
 				F6CCBADB20D9F0E800C66208 /* Task.swift in Sources */,
 				F6CCBAD120D8F23E00C66208 /* MainTableViewController.swift in Sources */,
+				F6CCBADF20D9F43900C66208 /* TaskTableViewCell.swift in Sources */,
 				F6CCBABF20D8EC7200C66208 /* AppDelegate.swift in Sources */,
 				F6CCBAD720D9EDE600C66208 /* Category.swift in Sources */,
 				F6CCBADD20D9F0F000C66208 /* DetailsViewController.swift in Sources */,

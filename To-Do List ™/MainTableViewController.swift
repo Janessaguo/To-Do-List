@@ -10,6 +10,16 @@ import UIKit
 
 class MainTableViewController: UITableViewController {
 
+    var incompleteTasks:[Task] = [
+        Task(title: "task 1", description: "desc 1", dueDate: "24", category: TaskCategory(name: "cat 1", colorRed: 0, colorGreen: 0, colorBlue: 0)),
+        Task(title: "task 2", description: "desc 2", dueDate: "23434324234324234342", category: TaskCategory(name: "cat 2", colorRed: 255, colorGreen: 0, colorBlue: 0))
+        ]
+    var completeTasks:[Task] = [
+        Task(title: "task 3", description: "desc 3", dueDate: "4364574", category: TaskCategory(name: "cat 3", colorRed: 0, colorGreen: 0, colorBlue: 0)),
+        Task(title: "task 4", description: "desc 4", dueDate: "6576534", category: TaskCategory(name: "cat 4", colorRed: 100, colorGreen: 0, colorBlue: 255))
+    ]
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,15 +39,21 @@ class MainTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 2
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        if section == 1 {
+            return incompleteTasks.count
+        } else if section == 2 {
+            return completeTasks.count
+        } else {
+            return 1
+        }
     }
 
-    /*
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
@@ -45,7 +61,7 @@ class MainTableViewController: UITableViewController {
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
