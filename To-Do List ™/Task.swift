@@ -14,7 +14,6 @@ class Task: Codable {
     var dueDate: String
     var category: TaskCategory
     
-    
     init(title: String, description: String, dueDate: String, category: TaskCategory) {
         self.title = title
         self.description = description
