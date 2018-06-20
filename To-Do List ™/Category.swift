@@ -8,9 +8,16 @@
 
 import Foundation
 
-struct Category: Codable {
+class TaskCategory: Codable {
     var name: String
     var colorRed: Int
     var colorGreen: Int
     var colorBlue: Int
+    
+    init(name: String, colorRed: Int, colorGreen: Int, colorBlue: Int) {
+        self.name = name
+        self.colorRed = colorRed
+        self.colorGreen = colorGreen
+        self.colorBlue = colorBlue
+    }
 }
