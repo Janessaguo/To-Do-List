@@ -1,15 +1,33 @@
 //
-//  MainTableViewController.swift
+//  createController.swift
 //  To-Do List ™
 //
-//  Created by x on 19/6/18.
+//  Created by 1010happy on 20/6/2018.
 //  Copyright © 2018 Beep Boop. All rights reserved.
 //
 
 import UIKit
 
-class MainTableViewController: UITableViewController {
+class createController: UITableViewController {
 
+    
+    @IBOutlet weak var datePicker: UIDatePicker!
+    
+    
+    @IBOutlet weak var dateLabel: UILabel!
+    
+    @IBAction func datePickerChanged(_ sender: Any) {
+        
+        let dateFormatter = DateFormatter()
+        
+        dateFormatter.dateStyle = DateFormatter.Style.short
+        dateFormatter.timeStyle = DateFormatter.Style.short
+        
+        let strDate = dateFormatter.string(from: datePicker.date)
+        
+        dateLabel.text = strDate
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,8 +37,7 @@ class MainTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-    
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
