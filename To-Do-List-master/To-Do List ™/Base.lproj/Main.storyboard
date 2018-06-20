@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bgU-1f-6tu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -13,7 +13,7 @@
         <!--Root View Controller-->
         <scene sceneID="Ngp-rq-tDM">
             <objects>
-                <tableViewController id="R9Q-s5-z3A" sceneMemberID="viewController">
+                <tableViewController id="R9Q-s5-z3A" customClass="createController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="tBW-yV-ofW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -35,14 +35,14 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="DUE DATE" id="8gO-rf-xj2">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="159" id="4FQ-EM-Xrh">
-                                        <rect key="frame" x="0.0" y="155.5" width="375" height="159"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="198" id="4FQ-EM-Xrh">
+                                        <rect key="frame" x="0.0" y="155.5" width="375" height="198"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4FQ-EM-Xrh" id="Bsu-ZR-xo7">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="158.5"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4FQ-EM-Xrh" id="Bsu-ZR-xo7">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="197.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="TOe-9S-IdM">
+                                                <datePicker contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="TOe-9S-IdM">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="162"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="162" id="Mu6-Vf-RXQ"/>
@@ -51,11 +51,22 @@
                                                     <date key="date" timeIntervalSinceReferenceDate="551151521.39190197">
                                                         <!--2018-06-20 01:38:41 +0000-->
                                                     </date>
+                                                    <connections>
+                                                        <action selector="datePickerChanged:" destination="R9Q-s5-z3A" eventType="valueChanged" id="TyS-og-vtt"/>
+                                                    </connections>
                                                 </datePicker>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="MM/DD/YY HH:MM " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PxU-cp-uwW">
+                                                    <rect key="frame" x="111" y="166" width="152" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="PxU-cp-uwW" firstAttribute="centerX" secondItem="Bsu-ZR-xo7" secondAttribute="centerX" id="B5p-P8-Qbh"/>
                                                 <constraint firstItem="TOe-9S-IdM" firstAttribute="centerX" secondItem="Bsu-ZR-xo7" secondAttribute="centerX" id="FqJ-Os-gQP"/>
                                                 <constraint firstAttribute="trailing" secondItem="TOe-9S-IdM" secondAttribute="trailing" id="KSg-ph-g4n"/>
+                                                <constraint firstItem="TOe-9S-IdM" firstAttribute="centerX" secondItem="Bsu-ZR-xo7" secondAttribute="centerX" id="VJF-eI-Haq"/>
                                                 <constraint firstItem="TOe-9S-IdM" firstAttribute="leading" secondItem="Bsu-ZR-xo7" secondAttribute="leading" id="sFU-QF-aPv"/>
                                                 <constraint firstItem="TOe-9S-IdM" firstAttribute="top" secondItem="Bsu-ZR-xo7" secondAttribute="top" id="sU8-02-jB1"/>
                                                 <constraint firstAttribute="bottom" secondItem="TOe-9S-IdM" secondAttribute="bottom" constant="-3.5" id="yrT-SK-NcM"/>
@@ -67,7 +78,7 @@
                             <tableViewSection headerTitle="CATEGORY" id="yd5-M8-KFn">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="xAn-04-FlP">
-                                        <rect key="frame" x="0.0" y="370.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="409.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xAn-04-FlP" id="a7t-hN-zxn">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -94,7 +105,7 @@
                             <tableViewSection headerTitle="DESCRIPTION" id="5aL-0L-qbN">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Gre-Sa-PgC">
-                                        <rect key="frame" x="0.0" y="470.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="509.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Gre-Sa-PgC" id="aOT-ye-TBZ">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -126,10 +137,14 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="X0n-Ga-xvk"/>
+                    <connections>
+                        <outlet property="dateLabel" destination="PxU-cp-uwW" id="RX6-vf-KvM"/>
+                        <outlet property="datePicker" destination="TOe-9S-IdM" id="S0N-70-XXX"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QTA-wd-XzU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-327.19999999999999" y="-1040.3298350824589"/>
+            <point key="canvasLocation" x="1223" y="-1110"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="aGa-1t-Fzv">
@@ -145,11 +160,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dhU-2s-RMQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1279" y="-1040"/>
+            <point key="canvasLocation" x="414" y="-1110"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="yWd-Bt-uSx">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="96g-ZI-3Uk" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="GJt-u1-1u1" customClass="MainTableViewController" customModule="To_Do_List__" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" sectionIndexMinimumDisplayRowCount="-1" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="MTV-zu-7Nu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -197,6 +213,9 @@
                                         <constraint firstAttribute="trailing" secondItem="HKV-00-qR3" secondAttribute="trailing" constant="45" id="TID-Xu-tS1"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="MgQ-DZ-iCc" kind="show" id="p6z-cq-9DN"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -208,14 +227,13 @@
                         <barButtonItem key="leftBarButtonItem" title="Edit" id="YBO-9a-vKR"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="4YX-pY-ggz">
                             <connections>
-                                <segue destination="ru5-na-OVL" kind="show" id="hJm-T0-3Qg"/>
+                                <segue destination="ru5-na-OVL" kind="show" identifier="newTaskSegue" id="hJm-T0-3Qg"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="96g-ZI-3Uk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-327.19999999999999" y="-367.46626686656674"/>
+            <point key="canvasLocation" x="-398" y="-252"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="AK7-kf-Q8a">
@@ -230,11 +248,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Title" id="xDg-Gz-oEK">
-                                        <barButtonItem key="rightBarButtonItem" title="Edit" id="DRv-T3-sRQ">
-                                            <connections>
-                                                <segue destination="ru5-na-OVL" kind="show" identifier="editItem" id="KTH-Ca-LJj"/>
-                                            </connections>
-                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Edit" id="DRv-T3-sRQ"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -245,7 +259,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xos-SA-T16" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="351" y="-368"/>
+            <point key="canvasLocation" x="414" y="-42"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="66A-2C-dk6">
@@ -261,10 +275,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vaZ-1t-eCp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1278" y="-367"/>
+            <point key="canvasLocation" x="-1223" y="-252"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="KTH-Ca-LJj"/>
-    </inferredMetricsTieBreakers>
 </document>
